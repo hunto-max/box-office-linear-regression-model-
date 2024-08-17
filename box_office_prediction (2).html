@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang='eng'>
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name = 'viewport' content='width=device-width intial-scaled=1.0'>
+        <title>Box Office Prediction </title>
+
+        <!--bootstrap 5 css--->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+
+        <body>
+          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Homepage</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                </li>
+                </ul>
+            </div>
+          </div>
+    </nav>
+                < div cladd
+
+
+
+            <div class ='containers mt-5'>
+                <h1 class='text-center'> Movie Gross predictor </h1>
+                <h2>Enter Data</h2>
+                <form method ='post' action='/box_office_prediction'>
+                    <!-- year-->
+                    <div class= 'mb-3'>
+                        <label for 'year' class= 'form-label'> Year</label>
+                        <select name='year' class='form-select' id='year' required>
+                            <select id="year">
+                                <option value="">Select Year</option>
+                              </select>
+                        </select>
+                    <!-- budget-->
+                    </div>
+                    <div class='mb-3'>
+                        <label for='budget' class='form-label'>Budget (in millions)</label>
+                        <input type='number' name='budget' class='form-control' id='budget' required>
+                    </div>
+                    <!-- score-->
+                    <div class='mb-3'>
+                        <label for='score' class='form-label'>Score (0-10)</label>
+                        <input type='number' name='score' class='form-control' id='score' min='0' max='10' step='0.1' required>
+                    </div>
+                    <!-- Votes-->
+                    <div class='mb-3'>
+                        <label for='votes' class='form-label'>Votes</label>
+                        <input type='number' name='votes' class='form-control' id='votes' required>
+                    </div>
+                    <!-- Runtime-->
+                    <div class='mb-3'>
+                        <label for="genres" class="form-label">Genre</label>
+                            <select id="genres" name="genres" class="form-select">
+                                <option value="">Select Genre</option>
+                                <option value="0">Action</option>
+                                <option value="1">Comedy</option>
+                                <option value="2">Drama</option>
+                                <option value="3">Horror</option>
+                                <option value="4">Romance</option>
+                                <option value="5">Science Fiction</option>
+                                <option value="6">Documentary</option>
+                                <option value="7">Fantasy</option>
+                                <option value="8">Thriller</option>
+                                <option value="9">Adventure</option>
+                                <option value="10">Animation</option>
+                                <option value="11">Mystery</option>
+                                <option value="12">Crime</option>
+                                <option value="13">Musical</option>
+                                <option value="14">Biography</option>
+                                <option value="15">War</option>
+                                <option value="16">Western</option>
+                                <option value="17">Family</option>
+                                <option value="18">History</option>
+                            </select>
+                    </div>
+                    <!--Genre-->
+                    <div class='mb-3'>
+                        <label for 'genres' class='form-label'>Genre</label></option>
+                        <option value="">Select Genre</option>
+                      </select>
+
+                    </div class ='mb-3'>
+
+                    <button type="submit" class="btn btn-primary">Predict</button>
+
+                </form>
+
+                <br><br><br><br>
+                 {% if predication %}
+                <div class= 'mt-4'>
+                    <h3>Predicated Gross: {{predication}}</h3>
+                </div>
+                {end if%}
+            </div>
+
+
+
+
+
+
+
+
+
+         <!--bootstrap 5--->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        </body>
+</html>
